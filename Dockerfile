@@ -1,4 +1,4 @@
-FROM openjdk:8u151-stretch
+FROM maven
 
 # Install pacakges
 RUN apt-get update
