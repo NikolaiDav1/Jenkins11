@@ -4,7 +4,7 @@ pipeline
     {
     docker
         {
-        image 'nikolaidav/jenkins11build:v2'
+        image 'nikolaidav/jenkins11build:v4'
         }
     }
 
