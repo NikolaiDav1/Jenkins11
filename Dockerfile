@@ -1,4 +1,4 @@
-FROM maven
+FROM maven:latest
 
 # Install pacakges
 RUN apt-get update
