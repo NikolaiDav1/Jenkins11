@@ -5,6 +5,7 @@ pipeline
     docker
         {
         image 'nikolaidav/jenkins11build:v4'
+        args '--privileged -v /var/run/docker.sock:/var/run/docker.sock -u root'
         }
     }
 
