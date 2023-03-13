@@ -6,9 +6,6 @@ RUN apt-get update
 # Install ssh
 RUN apt-get -y install openssh-client
 
-# Install maven
-RUN apt -y install maven
-
 # Install docker 18.03
 RUN apt-get -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
