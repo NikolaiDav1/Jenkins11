@@ -43,6 +43,7 @@ pipeline
         docker
             {
             image 'nikolaidav/jenkins11prod'
+            args '-p 8081:8080'
             }
         }
         steps
