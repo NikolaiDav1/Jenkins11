@@ -4,7 +4,7 @@ pipeline
     {
     docker
         {
-        image 'nikolaidav/jenkins11build:v4'
+        image 'nikolaidav/jenkins11build:v5'
         args '--privileged -v /var/run/docker.sock:/var/run/docker.sock -u root'
         }
     }
