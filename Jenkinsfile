@@ -45,6 +45,10 @@ pipeline
             image 'nikolaidav/jenkins11prod'
             }
         }
+        steps
+            {
+            echo 'start tomcat'
+            }
       }      
     }
   }
