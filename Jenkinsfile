@@ -31,8 +31,7 @@ pipeline
       {
       steps
         {
-        sh 'cp target/*.war docker-prod/'
-        sh 'docker build -t nikolaidav/jenkins11prod ./docker-prod/'
+        sh 'docker build -t nikolaidav/jenkins11prod -f ./docker-prod/Dockerfile target/'
         sh 'docker push nikolaidav/jenkins11prod'
         }
       }   
