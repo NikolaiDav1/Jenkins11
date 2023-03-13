@@ -34,6 +34,17 @@ pipeline
         sh 'docker build -t nikolaidav/jenkins11prod -f ./docker-prod/Dockerfile target/'
         sh 'docker push nikolaidav/jenkins11prod'
         }
-      }   
+      }
+
+    stage('Start prod docker image')
+      {
+      agent
+        {
+        docker
+            {
+            image 'nikolaidav/jenkins11prod'
+            }
+        }
+      }      
     }
   }
