@@ -40,6 +40,7 @@ pipeline
       {
       steps
         {
+        sh 'mkdir ~/.ssh'
         sh 'ssh-keyscan -H 51.250.99.110 >> ~/.ssh/known_hosts'
         sh '''ssh root@51.250.99.110 << EOF
 	docker run -p 8080:8080 nikolaidav/jenkins11prod
