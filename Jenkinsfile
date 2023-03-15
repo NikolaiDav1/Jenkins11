@@ -38,18 +38,12 @@ pipeline
 
     stage('Start prod docker image')
       {
-      agent
+      steps
         {
-        docker
-            {
-            image 'nikolaidav/jenkins11prod'
-            args '-p 8081:8080'
-            }
-        }
-        steps
-            {
-            echo 'start tomcat'
-            }
+        sh 'ssh-keyscan -H 51.250.99.110 >> ~/.ssh/known_hosts'
+        sh '''ssh root@51.250.99.110 << EOF
+	docker run -p 8080:8080 nikolaidav/jenkins11prod
+EOF'''            }
       }      
     }
   }
